@@ -33,16 +33,16 @@ public class StopwatchActivity extends Activity {
 
     //Before Stop the Activity save the Value of SaveInstaceState in a new Variable was Running
     @Override
-    public void onStop(){
-        super.onStop();
+    public void onPause(){
+        super.onPause();
         wasRunning= running;
         running = false;
 
     }
 
     @Override
-    public void onStart(){
-        super.onStart();
+    public void onResume(){
+        super.onResume();
         if(wasRunning){
             running= true;
         }
